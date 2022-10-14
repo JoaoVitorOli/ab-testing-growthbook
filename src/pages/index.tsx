@@ -1,10 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Confetti from 'react-confetti'
+import { useWindowSize } from '../hooks/useWindowSize';
 
 import CTA from '../components/CTA'
 import { Header } from '../components/Header'
 
 const Home: NextPage = () => {
+  const { width, height } = useWindowSize();
+
   return (
     <>
       <Head>
@@ -13,6 +17,11 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="min-h-full">
+        <Confetti
+          width={width}
+          height={height}
+        />
+
         <Header />
 
         <main>
