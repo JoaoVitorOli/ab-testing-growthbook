@@ -32,6 +32,18 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@growthbook/growthbook-react@^0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@growthbook/growthbook-react/-/growthbook-react-0.9.1.tgz#a2600cea90307e44d12b7780ec8c64d6418d71f1"
+  integrity sha512-b4yaMkcIeYQ+j5wND+wsGHbeV33QJoG6vQc4r/7qTDKmq3QhAyMNuLvfy/bYQ/nWnh5TmZArzQ6IRUGTWKfOGg==
+  dependencies:
+    "@growthbook/growthbook" "^0.18.1"
+
+"@growthbook/growthbook@^0.18.1":
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/@growthbook/growthbook/-/growthbook-0.18.1.tgz#1c8d09b95bd5573f6b06effd144a1e15ddfe6b55"
+  integrity sha512-hNNh515lleAUzTch+ezYYVHBteYTIAF1Xxh6+dLJk+BjbhPXUo6X9qNcryIN1b/IMLVnO1ZfE5zbAzVGEQai2w==
+
 "@headlessui/react@^1.7.3":
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.7.3.tgz#853c598ff47b37cdd192c5cbee890d9b610c3ec0"

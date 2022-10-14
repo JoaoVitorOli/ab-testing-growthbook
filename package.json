@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@growthbook/growthbook-react": "^0.9.1",
     "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.12",
     "next": "12.3.1",

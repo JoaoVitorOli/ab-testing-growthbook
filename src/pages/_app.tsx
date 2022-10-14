@@ -1,8 +1,14 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import Growthbook from '../lib/Growthbook'
+
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Growthbook>
+      <Component {...pageProps} />
+    </Growthbook>
+  )
 }
 
 export default MyApp

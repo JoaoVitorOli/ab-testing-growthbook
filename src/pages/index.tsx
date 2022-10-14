@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Confetti from 'react-confetti'
+import { useFeature } from "@growthbook/growthbook-react";
+
 import { useWindowSize } from '../hooks/useWindowSize';
 
 import CTA from '../components/CTA'
@@ -8,6 +10,9 @@ import { Header } from '../components/Header'
 
 const Home: NextPage = () => {
   const { width, height } = useWindowSize();
+  const variant = useFeature('welcome-message').value;
+
+  console.log(variant);
 
   return (
     <>
