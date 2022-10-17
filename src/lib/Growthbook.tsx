@@ -16,24 +16,29 @@ const growthbook = new GrowthBook({
 
 export default function Growthbook({ children }: GrowthbookProps) {
   useEffect(() => {
-    // Load feature definitions from API
-    fetch(process.env.GROWTHBOOK_API_ENDPOINT!)
-      .then((res) => res.json())
-      .then((json) => {
-        growthbook.setFeatures(json.features);
+    async function growthbookSetter() {
+      const response = await fetch(process.env.GROWTHBOOK_API_ENDPOINT, {
+        method: 'GET'
       });
 
-    // TODO: replace with real targeting attributes
-    growthbook.setAttributes({
-      "id": "foo",
-      "deviceId": "foo",
-      "company": "foo",
-      "loggedIn": true,
-      "employee": true,
-      "country": "foo",
-      "browser": "foo",
-      "url": "foo"
-    })
+      const data = await response.json();
+
+      growthbook.setFeatures(data.features);
+
+      // TODO: replace with real targeting attributes
+      growthbook.setAttributes({
+        "id": "foo",
+        "deviceId": "foo",
+        "company": "foo",
+        "loggedIn": true,
+        "employee": true,
+        "country": "foo",
+        "browser": "foo",
+        "url": "foo"
+      })
+    }
+    
+    growthbookSetter();
   }, [])
 
   return (
