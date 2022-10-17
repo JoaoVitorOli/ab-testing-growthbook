@@ -10,19 +10,17 @@ import { Header } from '../components/Header'
 
 const Home: NextPage = () => {
   const { width, height } = useWindowSize();
-  const variant = useFeature('test-1').value || 'a/b testing';
-
-  console.log(variant)
+  const variant = useFeature('welcome-message').value || 'a/b testing';
 
   return (
     <>
       <Head>
-        <title>{variant}</title>
+        <title>{variant.name}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="min-h-full">
-        {variant !== "original" && (
+        {variant.name !== "variante 1" && (
           <Confetti
             width={width}
             height={height}
