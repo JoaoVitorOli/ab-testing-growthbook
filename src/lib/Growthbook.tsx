@@ -17,17 +17,17 @@ const growthbook = new GrowthBook({
 export default function Growthbook({ children }: GrowthbookProps) {
   useEffect(() => {
     async function growthbookSetter() {
-      const response = await fetch(process.env.GROWTHBOOK_API_ENDPOINT, {
+      const response = await fetch('/api/growthbook', {
         method: 'GET'
       });
 
       const data = await response.json();
-
-      growthbook.setFeatures(data.features);
+    
+      growthbook.setFeatures(data.result);
 
       // TODO: replace with real targeting attributes
       growthbook.setAttributes({
-        "id": "foo",
+        "id": "",
         "deviceId": "foo",
         "company": "foo",
         "loggedIn": true,
