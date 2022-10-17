@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="min-h-full">
-        {variant.name !== "variante 1" && (
+        {variant.name !== "original" && (
           <Confetti
             width={width}
             height={height}
